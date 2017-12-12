@@ -27,7 +27,7 @@
 								<div class="menu-hd">
 									<a th:if="${session.user==null}" th:href="@{/login}" target="_top" class="h">亲，请登录</a>
 									<a th:if="${session.user==null}" th:href="@{/register}" target="_top">免费注册</a>
-									<a th:if="${session.user!=null}" th:text="${session.user.nickname}" th:href="@{/userinfo}"></a>
+									<a th:if="${session.user!=null}" th:text="${session.user.nickname}" th:href="@{/index}"></a>
 								</div>
 							</div>
 						</ul>
@@ -56,7 +56,7 @@
 
 							<div class="search-bar pr">
 								<a name="index_none_header_sysc" href="#"></a>
-								<form>
+								<form class="" action="/index" method="post">
 									<input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off" />
 									<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit" />
 								</form>
@@ -102,7 +102,7 @@
 											<img src="../images/getAvatar.do.jpg" />
 										</a>
 										<div class="m-info">
-											<em class="s-name">小叮当</em>
+											<em class="s-name" th:if="${session.user!=null}" th:text="${session.user.nickname}" >小叮当</em>
 											<div class="vip1"><a href="#"><span></span><em>会员专享</em></a></div>
 											<div class="safeText"><a th:href="@{/safety}">账户安全:<em style="margin-left:20px ;">60</em>分</a>
 												<div class="progressBar"><span style="left: -95px;" class="progress"></span></div>

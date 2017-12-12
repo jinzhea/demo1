@@ -49,4 +49,10 @@ public class AssetsControllerImpl implements AssetsController {
     public ModelAndView pointnew() {
         return new ModelAndView("pointnew");
     }
+
+    @Override
+    @RequestMapping(value = "/billlist")
+    public ModelAndView billlist() {
+        return new ModelAndView("billlist");
+    }
 }

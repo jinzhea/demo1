@@ -40,4 +40,34 @@ public class TransactionControllerImpl implements TransactionController{
     public ModelAndView orderinfo() {
         return new ModelAndView("orderinfo");
     }
+
+    @Override
+    @RequestMapping(value = "/pay")
+    public ModelAndView pay() {
+        return new ModelAndView("pay");
+    }
+
+    @Override
+    @RequestMapping(value = "/success")
+    public ModelAndView success() {
+        return new ModelAndView("success");
+    }
+
+    @Override
+    @RequestMapping(value = "/commentlist")
+    public ModelAndView commentlist() {
+        return new ModelAndView("commentlist");
+    }
+
+    @Override
+    @RequestMapping(value = "/record")
+    public ModelAndView record() {
+        return new ModelAndView("record");
+    }
+
+    @Override
+    @RequestMapping(value = "/logistics")
+    public ModelAndView logistics() {
+        return new ModelAndView("logistics");
+    }
 }

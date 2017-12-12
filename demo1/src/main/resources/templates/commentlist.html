@@ -11,10 +11,10 @@
     <link th:href="@{shop/css/amazeui.css}" rel="stylesheet" type="text/css" />
 
     <link th:href="@{css/personal.css}" rel="stylesheet" type="text/css" />
-    <link th:href="@{css/orstyle.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{css/appstyle.css}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" th:src="@{js/jquery-1.7.2.min.js}"></script>
 
-    <script th:src="@{shop/js/jquery.min.js}"></script>
-    <script th:src="@{shop/js/amazeui.js}"></script>
+
 
 </head>
 
@@ -91,137 +91,160 @@
 <div class="center">
     <div class="col-main">
 
-
         <div class="main-wrap">
 
             <div class="user-comment">
                 <!--标题 -->
                 <div class="am-cf am-padding">
-                    <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">评价管理</strong> / <small>Manage&nbsp;Comment</small></div>
+                    <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">发表评论</strong> / <small>Make&nbsp;Comments</small></div>
                 </div>
                 <hr/>
 
-                <div class="am-tabs am-tabs-d2 am-margin" data-am-tabs="">
-
-                    <ul class="am-avg-sm-2 am-tabs-nav am-nav am-nav-tabs">
-                        <li class="am-active"><a href="#tab1">所有评价</a></li>
-                        <li><a href="#tab2">有图评价</a></li>
-
-                    </ul>
-
-                    <div class="am-tabs-bd">
-                        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
-
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
-
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-
+                <div class="comment-main">
+<form>
+                    <div class="comment-list">
+                        <div class="item-pic">
+                            <a href="#" class="J_MakePoint">
+                                <img src="../images/comment.jpg_400x400.jpg" class="itempic" />
+                            </a>
                         </div>
-                        <div class="am-tab-panel am-fade" id="tab2">
 
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
+                        <div class="item-title">
 
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                                <div class="filePic"><img src="../images/image.jpg" alt="" /></div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
+                            <div class="item-name">
+                                <a href="#">
+                                    <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
+                                </a>
+                            </div>
+                            <div class="item-info">
+                                <div class="info-little">
+                                    <span>颜色：洛阳牡丹</span>
+                                    <span>包装：裸装</span>
+                                </div>
+                                <div class="item-price">
+                                    价格：<strong>19.88元</strong>
                                 </div>
                             </div>
-
+                        </div>
+                        <div class="clear"></div>
+                        <div class="item-comment">
+                            <textarea placeholder="请写下对宝贝的感受吧，对他人帮助很大哦！"></textarea>
+                        </div>
+                        <div class="filePic">
+                            <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" />
+                            <span>晒照片(0/5)</span>
+                            <img src="../images/image.jpg" alt="" />
+                        </div>
+                        <div class="item-opinion">
+                            <li><i class="op1"></i>好评</li>
+                            <li><i class="op2"></i>中评</li>
+                            <li><i class="op3"></i>差评</li>
                         </div>
                     </div>
+
+                    <!--多个商品评论-->
+                    <div class="comment-list">
+                        <div class="item-pic">
+                            <a href="#" class="J_MakePoint">
+                                <img src="../images/comment.jpg_400x400.jpg" class="itempic" />
+                            </a>
+                        </div>
+
+                        <div class="item-title">
+
+                            <div class="item-name">
+                                <a href="#">
+                                    <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
+                                </a>
+                            </div>
+                            <div class="item-info">
+                                <div class="info-little">
+                                    <span>颜色：洛阳牡丹</span>
+                                    <span>包装：裸装</span>
+                                </div>
+                                <div class="item-price">
+                                    价格：<strong>19.88元</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="item-comment">
+                            <textarea placeholder="请写下对宝贝的感受吧，对他人帮助很大哦！"></textarea>
+                        </div>
+                        <div class="filePic">
+                            <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" />
+                            <span>晒照片(0/5)</span>
+                            <img src="../images/image.jpg" alt="" />
+                        </div>
+                        <div class="item-opinion">
+                            <li><i class="op1"></i>好评</li>
+                            <li><i class="op2"></i>中评</li>
+                            <li><i class="op3"></i>差评</li>
+                        </div>
+                    </div>
+
+                    <div class="comment-list">
+                        <div class="item-pic">
+                            <a href="#" class="J_MakePoint">
+                                <img src="../images/comment.jpg_400x400.jpg" class="itempic" />
+                            </a>
+                        </div>
+
+                        <div class="item-title">
+
+                            <div class="item-name">
+                                <a href="#">
+                                    <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
+                                </a>
+                            </div>
+                            <div class="item-info">
+                                <div class="info-little">
+                                    <span>颜色：洛阳牡丹</span>
+                                    <span>包装：裸装</span>
+                                </div>
+                                <div class="item-price">
+                                    价格：<strong>19.88元</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="item-comment">
+                            <textarea placeholder="请写下对宝贝的感受吧，对他人帮助很大哦！"></textarea>
+                        </div>
+                        <div class="filePic">
+                            <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" />
+                            <span>晒照片(0/5)</span>
+                            <img src="../images/image.jpg" alt="" />
+                        </div>
+                        <div class="item-opinion">
+                            <li><i class="op1"></i>好评</li>
+                            <li><i class="op2"></i>中评</li>
+                            <li><i class="op3"></i>差评</li>
+                        </div>
+                    </div>
+
+                    <div class="info-btn">
+                        <div class="am-btn am-btn-danger"><input type="submit" class="am-btn am-btn-danger" value="发表评论"/></div>
+                    </div>
+</form>
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            $(".comment-list .item-opinion li").click(function() {
+                                $(this).prevAll().children('i').removeClass("active");
+                                $(this).nextAll().children('i').removeClass("active");
+                                $(this).children('i').addClass("active");
+
+                            });
+                        })
+                    </script>
+
+
+
                 </div>
 
             </div>
 
         </div>
-
-
-
 
     <div class="footer">
         <div class="footer-hd">

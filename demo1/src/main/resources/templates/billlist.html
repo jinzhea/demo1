@@ -11,7 +11,7 @@
     <link th:href="@{shop/css/amazeui.css}" rel="stylesheet" type="text/css" />
 
     <link th:href="@{css/personal.css}" rel="stylesheet" type="text/css" />
-    <link th:href="@{css/orstyle.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{css/bilstyle.css}" rel="stylesheet" type="text/css" />
 
     <script th:src="@{shop/js/jquery.min.js}"></script>
     <script th:src="@{shop/js/amazeui.js}"></script>
@@ -91,137 +91,102 @@
 <div class="center">
     <div class="col-main">
 
-
         <div class="main-wrap">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">账单明细</strong> / <small>Electronic&nbsp;bill</small></div>
+            </div>
+            <hr />
 
-            <div class="user-comment">
-                <!--标题 -->
-                <div class="am-cf am-padding">
-                    <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">评价管理</strong> / <small>Manage&nbsp;Comment</small></div>
+            <!--交易时间	-->
+
+            <div class="order-time">
+                <label class="form-label">交易时间：</label>
+                <div class="show-input">
+                    <select class="am-selected" data-am-selected="">
+                        <option value="today">今天</option>
+                        <option value="sevenDays" selected="">最近一周</option>
+                        <option value="oneMonth">最近一个月</option>
+                        <option value="threeMonths">最近三个月</option>
+                        <option class="date-trigger">自定义时间</option>
+                    </select>
                 </div>
-                <hr/>
-
-                <div class="am-tabs am-tabs-d2 am-margin" data-am-tabs="">
-
-                    <ul class="am-avg-sm-2 am-tabs-nav am-nav am-nav-tabs">
-                        <li class="am-active"><a href="#tab1">所有评价</a></li>
-                        <li><a href="#tab2">有图评价</a></li>
-
-                    </ul>
-
-                    <div class="am-tabs-bd">
-                        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
-
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
-
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="am-tab-panel am-fade" id="tab2">
-
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
-
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                                <div class="filePic"><img src="../images/image.jpg" alt="" /></div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
+                <div class="clear"></div>
             </div>
 
+            <table width="100%">
+
+                <thead>
+                <tr>
+                    <th class="memo"></th>
+                    <th class="time">创建时间</th>
+                    <th class="name">名称</th>
+                    <th class="amount">金额</th>
+                    <th class="action">操作</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="img">
+                        <i><img src="../images/songzi.jpg" /></i>
+                    </td>
+                    <td class="time">
+                        <p> 2016-01-28
+                        </p>
+                        <p class="text-muted"> 10:58
+                        </p>
+                    </td>
+                    <td class="title name">
+                        <p class="content">
+                            良品铺子精选松子，即开即食全国包邮
+                        </p>
+                    </td>
+
+                    <td class="amount">
+                        <span class="amount-pay">- 11.90</span>
+                    </td>
+                    <td class="operation">
+                        删除
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td class="img">
+                        <i><img src="../images/songzi.jpg" /></i>
+                    </td>
+                    <td class="time">
+                        <p> 2016-01-28
+                        </p>
+                        <p class="text-muted"> 10:58
+                        </p>
+                    </td>
+                    <td class="title name">
+                        <p class="content">
+                            良品铺子精选松子，即开即食全国包邮
+                        </p>
+                    </td>
+
+                    <td class="amount">
+                        <span class="amount-pay">- 11.90</span>
+                    </td>
+                    <td class="operation">
+                        删除
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $(".date-trigger").click(function() {
+                        $(".show-input").css("display", "none");
+                    });
+
+                })
+            </script>
+
         </div>
-
-
-
 
     <div class="footer">
         <div class="footer-hd">

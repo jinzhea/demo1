@@ -30,7 +30,7 @@
 						<div class="menu-hd">
 							<a th:if="${session.user==null}" th:href="@{/login}" target="_top" class="h">亲，请登录</a>
 							<a th:if="${session.user==null}" th:href="@{/register}" target="_top">免费注册</a>
-							<a th:if="${session.user!=null}" th:text="${session.user.nickname}" th:href="@{/userinfo}"></a>
+							<a th:if="${session.user!=null}" th:text="${session.user.nickname}" th:href="@{/index}"></a>
 						</div>
 					</div>
 				</ul>
@@ -180,7 +180,7 @@
 												</li>
 											</div>
 											<li class="td td-change td-changebutton">
-												<a href="record.html">
+												<a th:href="@{/record}">
 													<div class="am-btn am-btn-danger anniu">
 														钱款去向</div>
 												</a>

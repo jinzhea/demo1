@@ -11,10 +11,8 @@
     <link th:href="@{shop/css/amazeui.css}" rel="stylesheet" type="text/css" />
 
     <link th:href="@{css/personal.css}" rel="stylesheet" type="text/css" />
-    <link th:href="@{css/orstyle.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{css/lostyle.css}" rel="stylesheet" type="text/css" />
 
-    <script th:src="@{shop/js/jquery.min.js}"></script>
-    <script th:src="@{shop/js/amazeui.js}"></script>
 
 </head>
 
@@ -91,137 +89,100 @@
 <div class="center">
     <div class="col-main">
 
-
         <div class="main-wrap">
-
-            <div class="user-comment">
+            <div class="user-logistics">
                 <!--标题 -->
                 <div class="am-cf am-padding">
-                    <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">评价管理</strong> / <small>Manage&nbsp;Comment</small></div>
+                    <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">物流跟踪</strong> / <small>Logistics&nbsp;History</small></div>
                 </div>
                 <hr/>
-
-                <div class="am-tabs am-tabs-d2 am-margin" data-am-tabs="">
-
-                    <ul class="am-avg-sm-2 am-tabs-nav am-nav am-nav-tabs">
-                        <li class="am-active"><a href="#tab1">所有评价</a></li>
-                        <li><a href="#tab2">有图评价</a></li>
-
-                    </ul>
-
-                    <div class="am-tabs-bd">
-                        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
-
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
-
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-
+                <div class="package-title">
+                    <div class="m-item">
+                        <div class="item-pic">
+                            <img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg" />
                         </div>
-                        <div class="am-tab-panel am-fade" id="tab2">
-
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
-
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                                <div class="filePic"><img src="../images/image.jpg" alt="" /></div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-
+                        <div class="item-info">
+                            <p class="log-status">物流状态:<span>已签收</span> </p>
+                            <p>承运公司：天天物流</p>
+                            <p>快递单号：373269427868</p>
+                            <p>官方电话：4001-888-888</p>
                         </div>
                     </div>
+                    <div class="clear"></div>
                 </div>
+                <div class="package-status">
+                    <ul class="status-list">
+                        <li class="latest">
+                            <p class="text">【武汉市】已签收,签收人是青年城签收，感谢使用天天快递，期待再次为您服务</p>
+                            <div class="time-list">
+                                <span class="date">2015-12-19</span><span class="week">周六</span><span class="time">15:35:42</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">【武汉市】光谷关山分部派件员正在为您派件</p>
+                            <div class="time-list">
+                                <span class="date hidden">2015-12-19</span><span class="week hidden">周六</span><span class="time">14:27:28</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">【武汉市】快件已到达 光谷关山分部</p>
+                            <div class="time-list">
+                                <span class="date hidden">2015-12-19</span><span class="week hidden">周六</span><span class="time">09:25:51</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">【武汉市】武汉 已发出</p>
+                            <div class="time-list">
+                                <span class="date  hidden">2015-12-19</span><span class="week  hidden">周六</span><span class="time">06:56:03</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">【杭州市】杭州集散陆运 已发出</p>
+                            <div class="time-list">
+                                <span class="date">2015-12-17</span><span class="week">周四</span><span class="time">22:15:23</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">【绍兴市】诸暨 已发出</p>
+                            <div class="time-list">
+                                <span class="date hidden">2015-12-17</span><span class="week hidden">周四</span><span class="time">18:55:25</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">【绍兴市】天天快递 诸暨收件员 已揽件</p>
+                            <div class="time-list">
+                                <span class="date hidden">2015-12-17</span><span class="week hidden">周四</span><span class="time">18:54:25</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">商家正通知快递公司揽件</p>
+                            <div class="time-list">
+                                <span class="date hidden">2015-12-17</span><span class="week hidden">周四</span><span class="time">15:49:40</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">您的包裹已出库</p>
+                            <div class="time-list">
+                                <span class="date hidden">2015-12-17</span><span class="week hidden">周四</span><span class="time">15:49:40</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text">您的订单待配货</p>
+                            <div class="time-list">
+                                <span class="date hidden">2015-12-17</span><span class="week hidden">周四</span><span class="time">15:18:15</span>
+                            </div>
+                        </li>
+                        <li class="first">
+                            <p class="text">您的订单开始处理</p>
+                            <div class="time-list">
+                                <span class="date  hidden">2015-12-17</span><span class="week  hidden">周四</span><span class="time">14:27:50</span>
+                            </div>
+                        </li>
 
+                    </ul>
+                </div>
             </div>
-
         </div>
-
-
-
 
     <div class="footer">
         <div class="footer-hd">

@@ -18,6 +18,9 @@ public interface AssetsController {
     //跳转到账单页面
     public ModelAndView bill();
 
+    //跳转到账单明细页面
+    public ModelAndView billlist();
+
     //跳转到账户余额页面
     public ModelAndView wallet();
 

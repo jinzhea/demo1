@@ -11,7 +11,7 @@
     <link th:href="@{shop/css/amazeui.css}" rel="stylesheet" type="text/css" />
 
     <link th:href="@{css/personal.css}" rel="stylesheet" type="text/css" />
-    <link th:href="@{css/orstyle.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{css/stepstyle.css}" rel="stylesheet" type="text/css" />
 
     <script th:src="@{shop/js/jquery.min.js}"></script>
     <script th:src="@{shop/js/amazeui.js}"></script>
@@ -91,137 +91,66 @@
 <div class="center">
     <div class="col-main">
 
-
         <div class="main-wrap">
 
-            <div class="user-comment">
-                <!--标题 -->
-                <div class="am-cf am-padding">
-                    <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">评价管理</strong> / <small>Manage&nbsp;Comment</small></div>
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">支付密码</strong> / <small>Set&nbsp;Pay&nbsp;Password</small></div>
+            </div>
+            <hr/>
+            <!--进度条-->
+            <div class="m-progress">
+                <div class="m-progress-list">
+							<span class="step-1 step">
+                                <em class="u-progress-stage-bg"></em>
+                                <i class="u-stage-icon-inner">1<em class="bg"></em></i>
+                                <p class="stage-name">设置支付密码</p>
+                            </span>
+                    <span class="step-2 step">
+                                <em class="u-progress-stage-bg"></em>
+                                <i class="u-stage-icon-inner">2<em class="bg"></em></i>
+                                <p class="stage-name">完成</p>
+                            </span>
+                    <span class="u-progress-placeholder"></span>
                 </div>
-                <hr/>
-
-                <div class="am-tabs am-tabs-d2 am-margin" data-am-tabs="">
-
-                    <ul class="am-avg-sm-2 am-tabs-nav am-nav am-nav-tabs">
-                        <li class="am-active"><a href="#tab1">所有评价</a></li>
-                        <li><a href="#tab2">有图评价</a></li>
-
-                    </ul>
-
-                    <div class="am-tabs-bd">
-                        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
-
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
-
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="am-tab-panel am-fade" id="tab2">
-
-                            <div class="comment-main">
-                                <div class="comment-list">
-                                    <ul class="item-list">
-
-
-                                        <div class="comment-top">
-                                            <div class="th th-price">
-                                                <td class="td-inner">评价</td>
-                                            </div>
-                                            <div class="th th-item">
-                                                <td class="td-inner">商品</td>
-                                            </div>
-                                        </div>
-                                        <li class="td td-item">
-                                            <div class="item-pic">
-                                                <a href="#" class="J_MakePoint">
-                                                    <img src="../images/kouhong.jpg_80x80.jpg" class="itempic" />
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="td td-comment">
-                                            <div class="item-title">
-                                                <div class="item-opinion">好评</div>
-                                                <div class="item-name">
-                                                    <a href="#">
-                                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="item-comment">
-                                                宝贝非常漂亮，超级喜欢！！！ 口红颜色很正呐，还有第两支半价，买三支免单一支的活动，下次还要来买。就是物流太慢了，还要我自己去取快递，店家不考虑换个物流么？
-                                                <div class="filePic"><img src="../images/image.jpg" alt="" /></div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div>
-                                                    <p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
-                                                    <p class="info-time">2015-12-24</p>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-
-                        </div>
+                <div class="u-progress-bar total-steps-2">
+                    <div class="u-progress-bar-inner"></div>
+                </div>
+            </div>
+            <form class="am-form am-form-horizontal">
+                <div class="am-form-group bind">
+                    <label for="user-phone" class="am-form-label">验证手机</label>
+                    <div class="am-form-content">
+                        <span id="user-phone">186XXXX0531</span>
                     </div>
                 </div>
+                <div class="am-form-group code">
+                    <label for="user-code" class="am-form-label">验证码</label>
+                    <div class="am-form-content">
+                        <input type="tel" id="user-code" placeholder="短信验证码" />
+                    </div>
+                    <a class="btn" href="javascript:void(0);" onclick="sendMobileCode();" id="sendMobileCode">
+                        <div class="am-btn am-btn-danger">验证码</div>
+                    </a>
+                </div>
+                <div class="am-form-group">
+                    <label for="user-password" class="am-form-label">支付密码</label>
+                    <div class="am-form-content">
+                        <input type="tel" id="user-password" placeholder="6位数字" />
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="user-confirm-password" class="am-form-label">确认密码</label>
+                    <div class="am-form-content">
+                        <input type="tel" id="user-confirm-password" placeholder="请再次输入上面的密码" />
+                    </div>
+                </div>
+                <div class="info-btn">
+                    <div class="am-btn am-btn-danger">保存修改</div>
+                </div>
 
-            </div>
+            </form>
 
         </div>
-
-
-
 
     <div class="footer">
         <div class="footer-hd">

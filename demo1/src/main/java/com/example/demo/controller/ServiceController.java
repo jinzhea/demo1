@@ -12,4 +12,7 @@ public interface ServiceController {
 
     //跳转到我的消息页面
     public ModelAndView news();
+
+    //跳转到新闻页面
+    public ModelAndView blog();
 }

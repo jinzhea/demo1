@@ -19,22 +19,25 @@ public class User {
     @NotNull
     @Size(min = 3,max = 10,message = "名字长度为4-10位")
     private String username;//登录用户名
+
     @NotNull
     @Size(min = 3,max = 10,message = "密码长度为9-18位")
     private String password;//登录密码
+
     @NotNull
-    @Size(min = 3,max = 10,message = "昵称长度为3-10位")
     private String nickname;//昵称
+
     @NotNull
-    @Size(min = 2,max = 4,message = "姓名长度为2-4位")
     private String name;//姓名
+
     @NotNull
     private String sex;//性别
     @NotNull
     private String birthday;//出生年月
+
     @NotNull
-    @Size(min = 11,max = 11,message = "手机号为11位")
     private String phone;//手机号
+
     @NotNull
     private String email;//电子邮件
 
@@ -121,4 +124,18 @@ public class User {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

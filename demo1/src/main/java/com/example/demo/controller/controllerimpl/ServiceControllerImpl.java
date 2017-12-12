@@ -26,4 +26,11 @@ public class ServiceControllerImpl implements ServiceController {
     public ModelAndView news() {
         return new ModelAndView("news");
     }
+
+
+    @Override
+    @RequestMapping(value = "/blog")
+    public ModelAndView blog() {
+        return new ModelAndView("blog");
+    }
 }
