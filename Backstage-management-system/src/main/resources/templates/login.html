@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>登录</title>
+    <link th:href="@{css/style_log.css}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{css/userpanel.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{css/jquery.ui.all.css}"/>
+    <script th:src="@{js/adduser.js}"></script>
+
+</head>
+
+<body class="login" mycollectionplug="bind">
+<div class="login_m">
+    <div class="login_logo"><img th:src="@{images/logo.png}" width="196" height="46"/></div>
+    <div class="login_boder">
+
+        <form action="/login" method="post" th:object="${user}">
+            <div class="login_padding" id="login_model">
+
+
+                <b style="font-size: 15px">用户名:</b>
+                <label>
+                    <input type="text" name="username" class="txt_input txt_input2" placeholder="Username"
+                           th:value="*{username}"/>
+                </label>
+                <b style="font-size: 15px">密码:</b>
+                <label>
+                    <input type="password" name="password" class="txt_input" placeholder="Password"
+                           th:value="*{password}"/>
+                </label>
+                <p th:if="${tip} eq 1" th:text="|用户名或密码错误|" style="font-size: 12px;color: #a94442;margin-top: -5px"></p>
+
+                <p class="forgot"><a id="iforget" href="javascript:void(0);">忘记密码</a></p>
+                <div class="rem_sub">
+                    <div class="rem_sub_l">
+                        <input id="checkbox" type="checkbox" name="checkbox"/>
+                        <label for="checkbox">记住密码</label>
+                    </div>
+                    <label>
+                        <input type="submit" class="sub_button" name="button" id="button" value="登录"
+                               style="opacity: 0.7;"/>
+                    </label>
+                </div>
+            </div>
+        </form>
+
+
+        <div id="forget_model" class="login_padding" style="display:none">
+            <br/>
+
+
+            <div class="rem_sub">
+                <div class="rem_sub_l">
+                </div>
+                <label>
+                    <input type="submit" class="sub_buttons" name="button" id="Retrievenow" value="Retrieve now"
+                           style="opacity: 0.7;"/>
+                    　　　
+                    <input type="submit" class="sub_button" name="button" id="denglou" value="Return"
+                           style="opacity: 0.7;"/>　　
+
+                </label>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br/> <br/>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="head">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户详细信息</title>
+    <link th:href="@{css/userinfo.css}" rel="stylesheet"/>
+</head>
+<body>
+<div layout:fragment="content" class="col-sm-12">
+
+    <div class="userinfo1" >
+        <div class="userinfo2" >
+            <ul class="list-group" style="width: 500px " th:object="${user}">
+                <lable>用户名：</lable>
+                <li class="list-group-item"><b th:text="*{username}"></b></li>
+                <lable>密码：</lable>
+                <li class="list-group-item"><b th:text="*{password}"></b></li>
+                <lable>电子邮件：</lable>
+                <li class="list-group-item"><b th:text="*{email}"></b></li>
+                <lable>联系方式：</lable>
+                <li class="list-group-item"><b th:text="*{phone}"></b></li>
+                <lable>性别：</lable>
+                <li class="list-group-item"><b th:text="*{sex}"></b></li>
+                <lable>创建时间：</lable>
+                <li class="list-group-item"><b th:text="*{#dates.format(creat_time,'yyyy年MM月dd日 HH:mm')}"></b></li>
+                <lable>修改时间：</lable>
+                <li class="list-group-item"><b th:text="*{#dates.format(update_time,'yyyy年MM月dd日 HH:mm')}"></b></li>
+            </ul>
+            <p class="lead" style="margin-left: 175px">
+                <a class="btn btn-info" th:href="@{/userupdate(id=${user.id})}" role="button">修改</a>
+                <a class="btn btn-success" th:href="@{/userlist}" role="button">返回</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

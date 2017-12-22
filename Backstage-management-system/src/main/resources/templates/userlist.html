@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="head">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户列表</title>
+    <link th:href="@{css/userlist.css}" rel="stylesheet"/>
+    <style>#size {
+        width: 50px;
+        height: 25px;
+        margin-top: 6px;
+        font-size: 10px;
+        border: 1px #00acac solid;
+    }</style>
+</head>
+<body>
+
+<div layout:fragment="content" class="col-sm-12">
+
+    <form class="form-inline" action="/likefind" method="post">
+        <div class="form-group mx-sm-3 mb-2" id="sousuo">
+            <input type="text" class="form-control" name="likename" placeholder="搜索用户"/>
+            <input type="submit" class="btn btn-info" id="search" value="搜索"
+                   style="margin-left: -5px;margin-top: -36px"/>
+        </div>
+    </form>
+
+
+    <div class="userlist">
+        <div>
+            <div class="sousou" th:if="${tip} eq 1">
+                <p style="float: left;">每页显示</p>
+                <div class="dropdown" style="float: left;margin-top: -10px">
+                    <input type="text" id="size" onblur="jump(this.value)"/>
+                </div>
+                <p style="float: left;">条数据</p>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>
+                        <button onclick="del()">删除</button>
+                    </th>
+                    <th>用户名</th>
+                    <th>密码</th>
+                    <th style="width: 150px">操作</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <tr th:each="list : ${userlist}">
+                    <form>
+                        <td><input name="ids" type="checkbox" th:value="${list.id}"/></td>
+                        <td class="td"><p class="list" th:text="${list.username}"></p></td>
+                        <td class="td"><p class="list" th:text="${list.password}"></p></td>
+                        <td class="td">
+                            <a class="btn btn-info" name="detail" th:text="详情"
+                               th:href="@{/userinfo(id=${list.id})}"></a>
+                            <a class="btn btn-danger" name="detail" th:text="删除"
+                               th:href="@{/delete(id=${list.id})}"></a>
+                        </td>
+                    </form>
+                </tr>
+                </tbody>
+            </table>
+
+            <p class="sansserif" th:if="${tip} eq 0" th:text="|一共找到${count}条数据|"></p>
+            <ul id="fenye" th:unless="${!(tip eq 1)}" th:if="(${pagesize} &gt; 1)" class="pagination pagination-lg"
+                style="margin-left: 20%">
+
+                <!-- 上一页 -->
+                <li class="page-item" data-th-classappend="(${pagenumber}-1 &lt; 0) ? 'disabled' : ''">
+                    <a th:href="@{/findallByPage(page=((${pagenumber}-1 &lt; 1)?1:(${pagenumber})),size=${size})}"
+                       class="page-link" data-th-attr="pageIndex=${pagenumber} - 1" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+
+                <!-- 迭代生成页码 -->
+                <li class="page-item" data-th-each="i : ${#numbers.sequence(1, pagesize)}"
+                    data-th-classappend="${(pagenumber + 1) eq i} ? 'active' : ''">
+                    <a class="page-link" data-th-attr="pageIndex=${i} - 1"
+                       th:href="@{/findallByPage(page=(${i}),size=${size})}">
+                        <span data-th-text="${i}"></span>
+                    </a>
+                </li>
+
+                <!-- 下一页 -->
+                <li class="page-item" data-th-classappend="(${pagenumber+1} &gt;= ${pagesize}) ? 'disabled' : ''">
+                    <a th:href="@{ /findallByPage(page=((${pagenumber}+1 &gt;= ${pagesize})?${pagesize}:(${pagenumber}+2)),size=${size}) }"
+                       class="page-link" data-th-attr="pageIndex=${pagenumber} + 1" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
